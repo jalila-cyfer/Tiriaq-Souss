@@ -1,0 +1,54 @@
+/* ---- Bannière ---- */
+.contact-hero[b-v98hn4crxy] { position: relative; display: grid; align-items: center; min-height: 280px; padding: 3rem; overflow: hidden; color: #fff; }
+.contact-hero .bg[b-v98hn4crxy] { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+.contact-hero .overlay[b-v98hn4crxy] { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(31, 61, 27, .92) 0%, rgba(31, 61, 27, .65) 55%, rgba(31, 61, 27, .25) 100%); }
+.hero-text[b-v98hn4crxy] { position: relative; max-width: 560px; }
+.tagline[b-v98hn4crxy] { margin: 0 0 .8rem; font-size: .85rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: #cfe3ca; }
+.hero-text h1[b-v98hn4crxy] { margin: 0 0 1rem; font-family: 'DM Serif Display', serif; font-weight: 400; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.12; }
+.hero-text p:last-child[b-v98hn4crxy] { margin: 0; line-height: 1.8; color: #e8f0e5; }
+
+/* ---- Corps ---- */
+.contact-body[b-v98hn4crxy] { display: grid; grid-template-columns: 1fr 1.2fr; gap: 2.5rem; padding: 3rem; background: #fdfcf9; align-items: start; }
+h2[b-v98hn4crxy] { margin: 0 0 .8rem; font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 1.8rem; color: #1f3d1b; }
+
+/* Coordonnées */
+.about[b-v98hn4crxy] { margin: 0 0 1.6rem; line-height: 1.7; color: #444; }
+.info-list[b-v98hn4crxy] { margin: 0 0 1.4rem; padding: 0; list-style: none; display: grid; gap: .8rem; }
+.info-list li[b-v98hn4crxy] { display: flex; gap: .9rem; align-items: center; padding: .9rem 1rem; background: #f4f2ec; border-radius: 10px; }
+.ico[b-v98hn4crxy] { display: grid; place-items: center; flex: none; width: 42px; height: 42px; font-size: 1.15rem; background: #e8efe5; border-radius: 50%; }
+.info-list strong[b-v98hn4crxy] { display: block; font-size: .78rem; letter-spacing: .04em; text-transform: uppercase; color: #3f6b3a; }
+.info-list span[b-v98hn4crxy], .info-list a[b-v98hn4crxy] { font-size: .95rem; color: #2b2b2b; text-decoration: none; }
+.info-list a:hover[b-v98hn4crxy] { color: #2f5d2a; text-decoration: underline; }
+.map-link[b-v98hn4crxy] { font-size: .9rem; font-weight: 700; color: #2f5d2a; text-decoration: none; }
+.map-link:hover[b-v98hn4crxy] { text-decoration: underline; }
+
+/* Formulaire */
+.form-card[b-v98hn4crxy] { padding: 2rem; background: #fff; border: 1px solid #e8e3d6; border-radius: 12px; box-shadow: 0 10px 28px rgba(31, 61, 27, .08); }
+.row[b-v98hn4crxy] { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.field[b-v98hn4crxy] { display: block; margin-bottom: 1rem; }
+.field span[b-v98hn4crxy] { display: block; margin-bottom: .35rem; font-size: .82rem; font-weight: 600; color: #2b2b2b; }
+.field input[b-v98hn4crxy], .field select[b-v98hn4crxy], .field textarea[b-v98hn4crxy] {
+    width: 100%; padding: .75rem .9rem; box-sizing: border-box;
+    font: inherit; font-size: .95rem; color: #222;
+    background: #fdfcf9; border: 1.5px solid #d4dccf; border-radius: 6px;
+}
+.field textarea[b-v98hn4crxy] { resize: vertical; }
+.field input:focus[b-v98hn4crxy], .field select:focus[b-v98hn4crxy], .field textarea:focus[b-v98hn4crxy] { outline: none; border-color: #2f5d2a; box-shadow: 0 0 0 3px rgba(47, 93, 42, .15); }
+
+.btn[b-v98hn4crxy] {
+    display: inline-block; padding: 1rem 2.4rem; border: 2px solid #2f5d2a; border-radius: 4px;
+    background: #2f5d2a; color: #fff; cursor: pointer;
+    font: inherit; font-size: .85rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+    transition: background .2s;
+}
+.btn:hover[b-v98hn4crxy] { background: #244a20; }
+
+.success[b-v98hn4crxy] { padding: 1.4rem; background: #eef4ec; border-radius: 10px; }
+.success strong[b-v98hn4crxy] { font-size: 1.1rem; color: #1f3d1b; }
+.success p[b-v98hn4crxy] { margin: .5rem 0 1.2rem; line-height: 1.7; color: #333; }
+
+@media (max-width: 960px) {
+    .contact-hero[b-v98hn4crxy] { padding: 2rem 1.2rem; min-height: 220px; }
+    .contact-body[b-v98hn4crxy] { grid-template-columns: 1fr; padding: 1.5rem 1.2rem 3rem; }
+    .row[b-v98hn4crxy] { grid-template-columns: 1fr; gap: 0; }
+}

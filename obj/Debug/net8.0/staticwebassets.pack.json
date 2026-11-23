@@ -1,0 +1,229 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\appStore.bundle.scp.css",
+      "PackagePath": "staticwebassets\\appStore.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\a.jpg",
+      "PackagePath": "staticwebassets\\images\\a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\about-argan.jpg",
+      "PackagePath": "staticwebassets\\images\\about-argan.jpg"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\b.jpg",
+      "PackagePath": "staticwebassets\\images\\b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\hero-products.jpg",
+      "PackagePath": "staticwebassets\\images\\hero-products.jpg"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\Miel-Caroubier.HEIC",
+      "PackagePath": "staticwebassets\\images\\products\\Miel-Caroubier.HEIC"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\Miel-Caroubier.png",
+      "PackagePath": "staticwebassets\\images\\products\\Miel-Caroubier.png"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\Miel-Chardon.png",
+      "PackagePath": "staticwebassets\\images\\products\\Miel-Chardon.png"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\Miel-Cresson.HEIC",
+      "PackagePath": "staticwebassets\\images\\products\\Miel-Cresson.HEIC"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\Miel-Cresson.png",
+      "PackagePath": "staticwebassets\\images\\products\\Miel-Cresson.png"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\Miel-Farnan.HEIC",
+      "PackagePath": "staticwebassets\\images\\products\\Miel-Farnan.HEIC"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\Miel-Farnan.png",
+      "PackagePath": "staticwebassets\\images\\products\\Miel-Farnan.png"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\Miel-Fenouil.png",
+      "PackagePath": "staticwebassets\\images\\products\\Miel-Fenouil.png"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\Miel-Genevrier.HEIC",
+      "PackagePath": "staticwebassets\\images\\products\\Miel-Genevrier.HEIC"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\Miel-Genevrier.png",
+      "PackagePath": "staticwebassets\\images\\products\\Miel-Genevrier.png"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\Miel-Jujubier.HEIC",
+      "PackagePath": "staticwebassets\\images\\products\\Miel-Jujubier.HEIC"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\Miel-Jujubier.png",
+      "PackagePath": "staticwebassets\\images\\products\\Miel-Jujubier.png"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\Miel-Printemps.HEIC",
+      "PackagePath": "staticwebassets\\images\\products\\Miel-Printemps.HEIC"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\Miel-Printemps.png",
+      "PackagePath": "staticwebassets\\images\\products\\Miel-Printemps.png"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\Miel-Thym.HEIC",
+      "PackagePath": "staticwebassets\\images\\products\\Miel-Thym.HEIC"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\Miel-Thym.png",
+      "PackagePath": "staticwebassets\\images\\products\\Miel-Thym.png"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\Miel-euca.png",
+      "PackagePath": "staticwebassets\\images\\products\\Miel-euca.png"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\Miel-herbs.png",
+      "PackagePath": "staticwebassets\\images\\products\\Miel-herbs.png"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\Miel-heuphorbe.png",
+      "PackagePath": "staticwebassets\\images\\products\\Miel-heuphorbe.png"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\Miel-oranger.png",
+      "PackagePath": "staticwebassets\\images\\products\\Miel-oranger.png"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\Noix-Miel.HEIC",
+      "PackagePath": "staticwebassets\\images\\products\\Noix-Miel.HEIC"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\Noix-Miel.png",
+      "PackagePath": "staticwebassets\\images\\products\\Noix-Miel.png"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\Pot de miel doré TRIAQ SOUSS.png",
+      "PackagePath": "staticwebassets\\images\\products\\Pot de miel doré TRIAQ SOUSS.png"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\amlou-amande-miel-orange.png",
+      "PackagePath": "staticwebassets\\images\\products\\amlou-amande-miel-orange.png"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\amlou-herb.png",
+      "PackagePath": "staticwebassets\\images\\products\\amlou-herb.png"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\amlou-kajou.png",
+      "PackagePath": "staticwebassets\\images\\products\\amlou-kajou.png"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\amlou-sesame-miel.png",
+      "PackagePath": "staticwebassets\\images\\products\\amlou-sesame-miel.png"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\amlou-vert.png",
+      "PackagePath": "staticwebassets\\images\\products\\amlou-vert.png"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\amlou.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\amlou.jpg"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\argan-noir-or.png",
+      "PackagePath": "staticwebassets\\images\\products\\argan-noir-or.png"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\argan.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\argan.jpg"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\huile-argan-Shininguxe.png",
+      "PackagePath": "staticwebassets\\images\\products\\huile-argan-Shininguxe.png"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\products\\huile-argan.png",
+      "PackagePath": "staticwebassets\\images\\products\\huile-argan.png"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\recipes\\carpaccio-betterave-argan.jpg",
+      "PackagePath": "staticwebassets\\images\\recipes\\carpaccio-betterave-argan.jpg"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\recipes\\cookies-amlou.jpg",
+      "PackagePath": "staticwebassets\\images\\recipes\\cookies-amlou.jpg"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\recipes\\granola-miel.jpg",
+      "PackagePath": "staticwebassets\\images\\recipes\\granola-miel.jpg"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\recipes\\houmous-argan.jpg",
+      "PackagePath": "staticwebassets\\images\\recipes\\houmous-argan.jpg"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\recipes\\poulet-miel-thym.jpg",
+      "PackagePath": "staticwebassets\\images\\recipes\\poulet-miel-thym.jpg"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\recipes\\salade-fraises-argan.jpg",
+      "PackagePath": "staticwebassets\\images\\recipes\\salade-fraises-argan.jpg"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\recipes\\smoothie-bowl-amlou.jpg",
+      "PackagePath": "staticwebassets\\images\\recipes\\smoothie-bowl-amlou.jpg"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\recipes\\tartines-amlou-banane.jpg",
+      "PackagePath": "staticwebassets\\images\\recipes\\tartines-amlou-banane.jpg"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\images\\recipes\\yaourt-miel-noix.jpg",
+      "PackagePath": "staticwebassets\\images\\recipes\\yaourt-miel-noix.jpg"
+    },
+    {
+      "Id": "C:\\Users\\a.j\\source\\repos\\appStore\\appStore\\wwwroot\\test.css",
+      "PackagePath": "staticwebassets\\test.css"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.appStore.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.appStore.props",
+      "PackagePath": "build\\appStore.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.appStore.props",
+      "PackagePath": "buildMultiTargeting\\appStore.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.appStore.props",
+      "PackagePath": "buildTransitive\\appStore.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

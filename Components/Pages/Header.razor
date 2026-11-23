@@ -1,0 +1,70 @@
+<header class="header">
+    <a href="/" class="logo">
+        <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="32" cy="32" r="30" fill="none" stroke="#2f5d2a" stroke-width="2.5" />
+            <path d="M32 14c-7 6-7 16 0 22 7-6 7-16 0-22Z" fill="#2f5d2a" />
+            <path d="M32 50V30M32 40c-6 0-10-3-12-7 6 0 10 3 12 7ZM32 40c6 0 10-3 12-7-6 0-10 3-12 7Z"
+                  fill="none" stroke="#2f5d2a" stroke-width="2.5" stroke-linecap="round" />
+        </svg>
+        <span class="logo-text">
+            <strong>Tiriaq Souss</strong>
+            <small>Goût naturel, plaisir unique.</small>
+        </span>
+    </a>
+
+    <nav class="menu" aria-label="Navigation principale">
+        <a href="/products" class="menu-link">Shop</a>
+
+        <div class="dropdown">
+            <button class="menu-link" aria-haspopup="true" aria-expanded="@catOpen" @onclick="() => catOpen = !catOpen">
+                Categories
+                <svg viewBox="0 0 12 12" width="10" height="10" aria-hidden="true">
+                    <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                </svg>
+            </button>
+
+            @if (catOpen)
+            {
+                <div class="backdrop" @onclick="() => catOpen = false"></div>
+                <ul class="dropdown-list">
+                    @foreach (var c in Categories)
+                    {
+                        <li><a href="/categories/@c.Slug" @onclick="() => catOpen = false">@c.Name</a></li>
+                    }
+                    <li class="all"><a href="/products" @onclick="() => catOpen = false">Tous les produits</a></li>
+                </ul>
+            }
+        </div>
+
+        <a href="/best-sellers" class="menu-link">Best Sellers</a>
+        <a href="/about" class="menu-link">About Us</a>
+        <a href="/recipes" class="menu-link">Recipes</a>
+        <a href="/contact" class="menu-link">Contact</a>
+    </nav>
+
+    <div class="actions">
+        <button class="icon-btn" aria-label="Rechercher">
+            <svg viewBox="0 0 24 24" width="26" height="26"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.6" /><path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" /></svg>
+        </button>
+        <button class="icon-btn" aria-label="Mon compte">
+            <svg viewBox="0 0 24 24" width="26" height="26"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.6" /><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /></svg>
+        </button>
+        <button class="icon-btn cart" aria-label="Panier, @CartCount articles">
+            <svg viewBox="0 0 24 24" width="26" height="26"><path d="M2 3h3l2.5 12h11L21 7H6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" /><circle cx="9" cy="19.5" r="1.4" /><circle cx="17" cy="19.5" r="1.4" /></svg>
+            <span class="badge">@CartCount</span>
+        </button>
+    </div>
+</header>
+
+@code {
+    [Parameter] public int CartCount { get; set; } = 0;
+
+    private bool catOpen;
+
+    private readonly List<(string Slug, string Name)> Categories = new()
+    {
+        ("miel", "Miel"),
+        ("amlou", "Amlou"),
+        ("huile-argan", "Huile d'argan")
+    };
+}

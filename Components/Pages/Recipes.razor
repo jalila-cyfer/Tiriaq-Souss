@@ -1,0 +1,44 @@
+@page "/recipes"
+@using PureHarvest.Models
+@using PureHarvest.Services
+@inject RecipeService RecipeData
+@inject ProductService Products
+
+
+<Header CartCount="@cartCount" />
+<PageTitle>Recettes – Tiriaq Souss</PageTitle>
+
+<section class="recipes-page">
+    <header class="page-head">
+        <h1>Nos recettes</h1>
+        <p>@items.Count recette@(items.Count > 1 ? "s" : "")</p>
+    </header>
+
+    <p class="intro">
+        Des idées simples et gourmandes pour cuisiner le miel, l'amlou et l'huile d'argan au quotidien.
+    </p>
+
+    <nav class="chips" aria-label="Filtrer par produit">
+        <button class="chip @(selected is null ? "active" : "")" @onclick="() => selected = null">Toutes</button>
+        @foreach (var c in Products.Categories)
+        {
+            var slug = c.Slug;
+            <button class="chip @(selected == slug ? "active" : "")" @onclick="() => selected = slug">@c.Name</button>
+        }
+    </nav>
+
+    <div class="grid">
+        @foreach (var r in items)
+        {
+            <RecipeCard Recipe="r" CategoryName="@(Products.FindCategory(r.CategorySlug)?.Name ?? "")" />
+        }
+    </div>
+</section>
+
+@code {
+    private string? selected;
+    private int cartCount = 0;
+    private IReadOnlyList<Recipe> items =>
+        selected is null ? RecipeData.GetAll() : RecipeData.GetByCategory(selected);
+
+}

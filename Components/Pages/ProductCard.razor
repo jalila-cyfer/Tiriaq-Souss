@@ -1,0 +1,37 @@
+@using PureHarvest.Models
+<article class="card">
+    @if (Product.IsBestSeller)
+    {
+        <span class="badge">Best seller</span>
+    }
+
+    <button class="heart @(liked ? "liked" : "")" aria-label="Ajouter aux favoris" aria-pressed="@liked" @onclick="() => liked = !liked">
+        <svg viewBox="0 0 24 24" width="22" height="22">
+            <path d="M12 20.5s-7.5-4.6-9-9.2C2 8 4 5 7 5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3 0 5 3 4 6.300-1.500 4.600-9 9.200-9 9.200Z"
+                  fill="@(liked ? "currentColor" : "none")" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+        </svg>
+    </button>
+
+    <div class="photo">
+        <img src="@Product.Image" alt="@Product.Name" loading="lazy"
+             onerror="this.onerror=null;this.src='images/placeholder.svg'" />
+    </div>
+
+    <h3>@Product.Name</h3>
+    <p class="size">@Product.Size</p>
+    <p class="price">@Product.Price.ToString("N2", System.Globalization.CultureInfo.GetCultureInfo("fr-MA")) DH</p>
+
+    <div class="rating" title="@Product.Rating.ToString("0.0") / 5">
+        <span class="stars" aria-hidden="true">
+            <span class="stars-fill" style="width:@((Product.Rating / 5 * 100).ToString("0.#", System.Globalization.CultureInfo.InvariantCulture))%">★★★★★</span>
+            ★★★★★
+        </span>
+        <span class="count">(@Product.Reviews)</span>
+    </div>
+</article>
+
+@code {
+    [Parameter, EditorRequired] public Product Product { get; set; } = default!;
+
+    private bool liked;
+}

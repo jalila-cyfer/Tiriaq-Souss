@@ -1,0 +1,78 @@
+@page "/recipes/{Slug}"
+@using PureHarvest.Models
+@using PureHarvest.Services
+@inject RecipeService Recipes
+@inject ProductService Products
+
+@if (recipe is null)
+{
+    <PageTitle>Recette introuvable – Tiriaq Souss</PageTitle>
+    <section class="detail">
+        <a href="/recipes" class="back">← Toutes les recettes</a>
+        <p>Cette recette n'existe pas.</p>
+    </section>
+}
+else
+{
+    var category = Products.FindCategory(recipe.CategorySlug);
+
+    <PageTitle>@recipe.Title – Tiriaq Souss</PageTitle>
+
+    <section class="detail">
+        <a href="/recipes" class="back">← Toutes les recettes</a>
+
+        <div class="top">
+            <figure class="photo">
+                <img src="@recipe.Image" alt="@recipe.Title" onerror="this.onerror=null;this.src='images/placeholder.svg'" />
+            </figure>
+
+            <div class="intro">
+                <p class="tagline">@category?.Name</p>
+                <h1>@recipe.Title</h1>
+                <p class="lead">@recipe.Description</p>
+
+                <ul class="facts">
+                    <li><strong>@recipe.PrepMinutes min</strong><span>Préparation</span></li>
+                    <li><strong>@recipe.CookMinutes min</strong><span>Cuisson</span></li>
+                    <li><strong>@recipe.Servings</strong><span>Personnes</span></li>
+                    <li><strong>@recipe.Difficulty</strong><span>Niveau</span></li>
+                </ul>
+
+                @if (category is not null)
+                {
+                    <a href="/categories/@category.Slug" class="btn">Acheter : @category.Name</a>
+                }
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="ingredients">
+                <h2>Ingrédients</h2>
+                <ul>
+                    @foreach (var i in recipe.Ingredients)
+                    {
+                        <li>@i</li>
+                    }
+                </ul>
+            </div>
+
+            <div class="steps">
+                <h2>Préparation</h2>
+                <ol>
+                    @foreach (var s in recipe.Steps)
+                    {
+                        <li>@s</li>
+                    }
+                </ol>
+            </div>
+        </div>
+    </section>
+}
+
+@code {
+    [Parameter] public string Slug { get; set; } = "";
+
+    private Recipe? recipe;
+
+    protected override void OnParametersSet() => recipe = Recipes.FindBySlug(Slug);
+}

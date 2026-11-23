@@ -1,0 +1,6 @@
+.hero-visual[b-ndjdcbrth1] { height: 100%; display: flex; align-items: center; justify-content: flex-end; }
+.hero-visual img[b-ndjdcbrth1] { width: 100%; max-width: 760px; height: auto; object-fit: contain; }
+
+@media (max-width: 960px) {
+    .hero-visual[b-ndjdcbrth1] { justify-content: center; }
+}

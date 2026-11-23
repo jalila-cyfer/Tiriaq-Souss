@@ -1,0 +1,141 @@
+@page "/contact"
+
+<Header CartCount="@cartCount" />
+
+<PageTitle>Contact – Tiriaq Souss</PageTitle>
+
+<!-- BLOC 1 : Bannière avec photo -->
+<section class="contact-hero">
+    <img src="@HeroImage" alt="Les femmes de la coopérative au travail" class="bg"
+         onerror="this.onerror=null;this.src='images/placeholder.svg'" />
+    <div class="overlay"></div>
+    <div class="hero-text">
+        <p class="tagline">Contact</p>
+        <h1>Parlons de nos produits<br />et de nos producteurs.</h1>
+        <p>Une question, une commande, une visite à la coopérative ? Écrivez-nous, nous vous répondons rapidement.</p>
+    </div>
+</section>
+
+<!-- BLOC 2 : Coordonnées + formulaire -->
+<section class="contact-body">
+
+    <aside class="info">
+        <h2>@AssociationName</h2>
+        <p class="about">Association marocaine qui regroupe des productrices et producteurs de miel, d'amlou et d'huile d'argan biologiques.</p>
+
+        <ul class="info-list">
+            <li>
+                <span class="ico" aria-hidden="true">📍</span>
+                <div>
+                    <strong>Adresse</strong>
+                    <span>@Address</span>
+                </div>
+            </li>
+            <li>
+                <span class="ico" aria-hidden="true">📞</span>
+                <div>
+                    <strong>Téléphone</strong>
+                    <a href="tel:@Phone.Replace(" ", "")">@Phone</a>
+                </div>
+            </li>
+            <li>
+                <span class="ico" aria-hidden="true">💬</span>
+                <div>
+                    <strong>WhatsApp</strong>
+                    <a href="https://wa.me/@Whatsapp" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+                </div>
+            </li>
+            <li>
+                <span class="ico" aria-hidden="true">✉️</span>
+                <div>
+                    <strong>E-mail</strong>
+                    <a href="mailto:@Email">@Email</a>
+                </div>
+            </li>
+            <li>
+                <span class="ico" aria-hidden="true">🕘</span>
+                <div>
+                    <strong>Horaires</strong>
+                    <span>@Hours</span>
+                </div>
+            </li>
+        </ul>
+
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=@Uri.EscapeDataString(Address)"
+           target="_blank" rel="noopener">Voir sur la carte →</a>
+    </aside>
+
+    <div class="form-card">
+        <h2>Envoyez-nous un message</h2>
+
+        @if (sent)
+        {
+            <div class="success" role="status">
+                <strong>Merci @name !</strong>
+                <p>Votre message a bien été pris en compte. Nous vous répondrons très bientôt.</p>
+                <button type="button" class="btn" @onclick="Reset">Envoyer un autre message</button>
+            </div>
+        }
+        else
+        {
+            <form @onsubmit="Submit">
+                <div class="row">
+                    <label class="field">
+                        <span>Nom complet</span>
+                        <input type="text" @bind="name" required autocomplete="name" />
+                    </label>
+                    <label class="field">
+                        <span>E-mail</span>
+                        <input type="email" @bind="email" required autocomplete="email" />
+                    </label>
+                </div>
+
+                <label class="field">
+                    <span>Sujet</span>
+                    <select @bind="subject">
+                        <option>Commande</option>
+                        <option>Renseignement produit</option>
+                        <option>Visite de la coopérative</option>
+                        <option>Partenariat</option>
+                        <option>Autre</option>
+                    </select>
+                </label>
+
+                <label class="field">
+                    <span>Message</span>
+                    <textarea rows="5" @bind="message" required></textarea>
+                </label>
+
+                <button type="submit" class="btn">Envoyer le message</button>
+            </form>
+        }
+    </div>
+</section>
+
+@code {
+    // ===== À MODIFIER : informations de l'association (exemples fictifs) =====
+    private const string AssociationName = "Association Terre d'Argan";
+    private const string Address = "Route d'Agadir, 44000 Agadir, Maroc";
+    private const string Phone = "+212 5 24 55 43 05";
+    private const string Whatsapp = "212654387654";          // format international, sans + ni espaces
+    private const string Email = "Tiriaq@Souss.ma";
+    private const string Hours = "Lundi – Samedi : 9h00 – 18h00";
+    private const string HeroImage = "images/about-argan.jpg";
+    // =========================================================================
+    private int cartCount = 0;
+    private string name = "", email = "", subject = "Commande", message = "";
+    private bool sent;
+
+    private void Submit()
+    {
+        // Ici : appel à votre API ou service d'e-mail. Pour l'instant, simple confirmation.
+        sent = true;
+    }
+
+    private void Reset()
+    {
+        name = email = message = "";
+        subject = "Commande";
+        sent = false;
+    }
+}

@@ -1,0 +1,24 @@
+@using PureHarvest.Models
+
+<a href="/recipes/@Recipe.Slug" class="recipe-card">
+    <div class="photo">
+        <img src="@Recipe.Image" alt="@Recipe.Title" loading="lazy"
+             onerror="this.onerror=null;this.src='images/placeholder.svg'" />
+        <span class="tag">@CategoryName</span>
+    </div>
+
+    <div class="body">
+        <h3>@Recipe.Title</h3>
+        <p class="desc">@Recipe.Description</p>
+        <ul class="meta">
+            <li>⏱ @Recipe.TotalMinutes min</li>
+            <li>👥 @Recipe.Servings pers.</li>
+            <li>@Recipe.Difficulty</li>
+        </ul>
+    </div>
+</a>
+
+@code {
+    [Parameter, EditorRequired] public Recipe Recipe { get; set; } = default!;
+    [Parameter] public string CategoryName { get; set; } = "";
+}

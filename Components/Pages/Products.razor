@@ -1,0 +1,76 @@
+@page "/products"
+@page "/categories/{Slug}"
+@page "/best-sellers"
+@using PureHarvest.Models
+@using PureHarvest.Services
+@inject ProductService Service
+@inject NavigationManager Nav
+
+
+<Header CartCount="@cartCount" /> 
+
+<PageTitle>@title – Tiriaq Souss</PageTitle>
+
+<section class="products-page"> 
+    <header class="page-head">
+        <h1>@title</h1>
+        <p>@items.Count produit@(items.Count > 1 ? "s" : "")</p>
+    </header>
+
+    <nav class="chips" aria-label="Filtrer par catégorie">
+        <a href="/products" class="chip @(mode == Mode.All ? "active" : "")">Tous</a>
+        @foreach (var c in Service.Categories)
+        {
+            <a href="/categories/@c.Slug" class="chip @(mode == Mode.Category && Slug == c.Slug ? "active" : "")">@c.Name</a>
+        }
+        <a href="/best-sellers" class="chip @(mode == Mode.BestSellers ? "active" : "")">Best sellers</a>
+    </nav>
+
+    @if (items.Count == 0)
+    {
+        <p class="empty">Aucun produit dans cette catégorie. <a href="/products">Voir tous les produits</a></p>
+    }
+    else
+    {
+        <div class="grid">
+            @foreach (var p in items)
+            {
+                <ProductCard Product="p" />
+            }
+        </div>
+    }
+</section>
+
+@code {
+    [Parameter] public string? Slug { get; set; }
+    private int cartCount = 0;
+    private enum Mode { All, Category, BestSellers }
+
+    private Mode mode;
+    private string title = "Tous les produits";
+    private IReadOnlyList<Product> items = Array.Empty<Product>();
+
+    protected override void OnParametersSet()
+    {
+        var path = new Uri(Nav.Uri).AbsolutePath;
+
+        if (path.StartsWith("/best-sellers", StringComparison.OrdinalIgnoreCase))
+        {
+            mode = Mode.BestSellers;
+            title = "Best sellers";
+            items = Service.GetBestSellers(6);
+        }
+        else if (!string.IsNullOrEmpty(Slug))
+        {
+            mode = Mode.Category;
+            title = Service.FindCategory(Slug)?.Name ?? "Catégorie introuvable";
+            items = Service.GetByCategory(Slug);
+        }
+        else
+        {
+            mode = Mode.All;
+            title = "Tous les produits";
+            items = Service.GetAll();
+        }
+    }
+}

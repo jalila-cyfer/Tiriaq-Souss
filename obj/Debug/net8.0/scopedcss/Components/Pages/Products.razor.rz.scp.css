@@ -1,0 +1,22 @@
+.products-page[b-yqzjh0suxm] {
+    padding: 2rem 3rem 4rem;
+    background: linear-gradient(90deg, #faf7f1 0%, #f6f1e8 100%);
+    min-height: 70vh;
+}
+
+.page-head[b-yqzjh0suxm] { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1.2rem; }
+.page-head h1[b-yqzjh0suxm] { margin: 0; font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 2.4rem; color: #1f3d1b; }
+.page-head p[b-yqzjh0suxm] { margin: 0; color: #666; }
+
+.chips[b-yqzjh0suxm] { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 2rem; }
+.chip[b-yqzjh0suxm] {
+    padding: .45rem 1.1rem; border: 1.5px solid #c9d6c5; border-radius: 999px;
+    font-size: .85rem; font-weight: 600; color: #2b2b2b; text-decoration: none; background: #fff;
+}
+.chip:hover[b-yqzjh0suxm] { border-color: #2f5d2a; color: #2f5d2a; }
+.chip.active[b-yqzjh0suxm] { background: #2f5d2a; border-color: #2f5d2a; color: #fff; }
+
+.grid[b-yqzjh0suxm] { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.2rem; }
+.empty[b-yqzjh0suxm] { color: #555; }
+
+@media (max-width: 960px) { .products-page[b-yqzjh0suxm] { padding: 1.5rem 1.2rem 3rem; } }

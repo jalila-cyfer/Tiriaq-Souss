@@ -1,0 +1,92 @@
+@page "/about"
+
+<Header CartCount="@cartCount" />
+<PageTitle>À propos – Tiriaq Souss</PageTitle>
+
+<!-- BLOC 1 : Introduction + photo -->
+<section class="about-hero">
+    <div class="hero-text">
+        <p class="tagline">Notre histoire</p>
+        <h1>Du terroir à votre table,<br />en toute simplicité.</h1>
+        <p class="lead">
+            Tiriaq Souss est née d'une conviction : bien manger ne devrait être ni compliqué, ni réservé à quelques-uns.
+            Nous sélectionnons des produits 100 % biologiques, issus de producteurs locaux, pour une alimentation
+            plus saine et une planète mieux préservée.
+        </p>
+    </div>
+
+    <figure class="hero-photo">
+        <img src="images/about-argan.jpg"
+             alt="Des femmes d'une coopérative concassent des noix d'argan entre des paniers remplis de fruits" />
+    </figure>
+</section>
+
+<!-- BLOC 2 : Notre mission -->
+<section class="mission">
+    <div class="mission-text">
+        <h2>Notre mission</h2>
+        <p>
+            Nous travaillons main dans la main avec des coopératives et des artisans qui respectent la terre
+            et ceux qui la cultivent. Miel, amlou, huile d'argan : chaque produit est choisi pour son goût,
+            sa traçabilité et la façon dont il est fabriqué.
+        </p>
+        <p>
+            Notre promesse est simple : des ingrédients purs, sans additifs inutiles, à un prix juste
+            pour les producteurs comme pour vous.
+        </p>
+        <a href="/products" class="btn btn-primary">Découvrir nos produits</a>
+    </div>
+
+    <ul class="stats">
+        @foreach (var s in Stats)
+        {
+            <li>
+                <strong>@s.Value</strong>
+                <span>@s.Label</span>
+            </li>
+        }
+    </ul>
+</section>
+
+<!-- BLOC 3 : Nos valeurs -->
+<section class="values">
+    <h2>Ce qui nous guide</h2>
+    <div class="values-grid">
+        @foreach (var v in Values)
+        {
+            <article class="value-card">
+                <div class="icon" aria-hidden="true">@v.Icon</div>
+                <h3>@v.Title</h3>
+                <p>@v.Text</p>
+            </article>
+        }
+    </div>
+</section>
+
+<!-- BLOC 4 : Appel à l'action -->
+<section class="cta">
+    <h2>Une question ? Parlons-en.</h2>
+    <p>Notre équipe vous répond avec plaisir.</p>
+    <a href="/contact" class="btn btn-light">Nous contacter</a>
+</section>
+
+@code {
+    private record Stat(string Value, string Label);
+    private record ValueItem(string Icon, string Title, string Text);
+    private int cartCount = 0;
+    private readonly List<Stat> Stats = new()
+    {
+        new("100 %", "produits biologiques"),
+        new("30+", "producteurs partenaires"),
+        new("10 000+", "clients satisfaits"),
+        new("2015", "année de création")
+    };
+
+    private readonly List<ValueItem> Values = new()
+    {
+        new("🌿", "Naturel avant tout", "Des produits simples, sans conservateurs ni arômes artificiels, pour retrouver le vrai goût des aliments."),
+        new("🤝", "Commerce équitable", "Nous rémunérons justement nos partenaires et valorisons le savoir-faire des coopératives locales."),
+        new("🌍", "Respect de la planète", "Emballages réduits, circuits courts et agriculture respectueuse des sols et de la biodiversité."),
+        new("⭐", "Qualité garantie", "Chaque lot est contrôlé avant d'arriver chez vous. Si un produit ne vous convient pas, nous le reprenons.")
+    };
+}

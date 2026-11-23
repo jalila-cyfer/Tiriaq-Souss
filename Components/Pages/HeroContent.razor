@@ -1,0 +1,33 @@
+<div class="hero-content">
+    <p class="tagline">Pure food. Real goodness.</p>
+
+    <h1>Choose Organic.<br />Live Healthy.</h1>
+
+    <p class="description">
+        Discover a wide range of 100% organic staples, superfoods,
+        and daily essentials for a healthier you and a better planet.
+    </p>
+
+    <div class="buttons">
+        <a href="/shop" class="btn btn-primary">Shop now</a>
+        <a href="/categories" class="btn btn-outline">Explore categories</a>
+    </div>
+
+    <div class="dots" role="tablist" aria-label="Diapositives">
+        @for (int i = 0; i < SlideCount; i++)
+        {
+            var index = i;
+            <button class="dot @(index == ActiveSlide ? "active" : "")"
+                    role="tab"
+                    aria-selected="@(index == ActiveSlide)"
+                    aria-label="Diapositive @(index + 1)"
+                    @onclick="() => OnSlideChanged.InvokeAsync(index)"></button>
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter] public int SlideCount { get; set; } = 3;
+    [Parameter] public int ActiveSlide { get; set; } = 0;
+    [Parameter] public EventCallback<int> OnSlideChanged { get; set; }
+}

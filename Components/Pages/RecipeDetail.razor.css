@@ -1,0 +1,46 @@
+.detail { padding: 2rem 3rem 4rem; background: #fdfcf9; }
+.back { display: inline-block; margin-bottom: 1.4rem; font-size: .88rem; font-weight: 600; color: #2f5d2a; text-decoration: none; }
+.back:hover { text-decoration: underline; }
+
+.top { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; margin-bottom: 3rem; }
+.photo { margin: 0; }
+.photo img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 14px; box-shadow: 0 16px 40px rgba(31, 61, 27, .18); }
+
+.tagline { margin: 0 0 .8rem; font-size: .85rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: #3f6b3a; }
+h1 { margin: 0 0 1rem; font-family: 'DM Serif Display', serif; font-weight: 400; font-size: clamp(2rem, 4vw, 3rem); line-height: 1.1; color: #1f3d1b; }
+.lead { margin: 0 0 1.5rem; font-size: 1.05rem; line-height: 1.8; color: #333; }
+
+.facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: .6rem; margin: 0 0 1.6rem; padding: 0; list-style: none; }
+.facts li { padding: .8rem .4rem; text-align: center; background: #f4f2ec; border-radius: 8px; }
+.facts strong { display: block; font-size: .95rem; color: #2f5d2a; }
+.facts span { font-size: .72rem; color: #555; }
+
+.btn {
+    display: inline-block; padding: .9rem 2rem; border-radius: 4px;
+    background: #2f5d2a; color: #fff; border: 2px solid #2f5d2a;
+    font-size: .82rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; text-decoration: none;
+}
+.btn:hover { background: #244a20; }
+
+.content { display: grid; grid-template-columns: 1fr 1.6fr; gap: 3rem; }
+h2 { margin: 0 0 1rem; font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 1.7rem; color: #1f3d1b; }
+
+.ingredients { padding: 1.6rem; background: #f4f2ec; border-radius: 10px; align-self: start; }
+.ingredients ul { margin: 0; padding-left: 1.2rem; }
+.ingredients li { margin-bottom: .55rem; line-height: 1.5; color: #333; }
+.ingredients li::marker { color: #2f6a2b; }
+
+.steps ol { margin: 0; padding: 0; list-style: none; counter-reset: step; }
+.steps li { position: relative; margin-bottom: 1.1rem; padding-left: 3rem; line-height: 1.75; color: #333; counter-increment: step; }
+.steps li::before {
+    content: counter(step);
+    position: absolute; left: 0; top: 0;
+    display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%;
+    background: #2f5d2a; color: #fff; font-weight: 700; font-size: .9rem;
+}
+
+@media (max-width: 960px) {
+    .detail { padding: 1.5rem 1.2rem 3rem; }
+    .top, .content { grid-template-columns: 1fr; gap: 1.6rem; }
+    .facts { grid-template-columns: repeat(2, 1fr); }
+}

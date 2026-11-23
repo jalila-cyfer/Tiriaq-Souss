@@ -1,0 +1,21 @@
+.recipes-page[b-au3dybtdly] { padding: 2rem 3rem 4rem; background: #fdfcf9; min-height: 70vh; }
+
+.page-head[b-au3dybtdly] { display: flex; align-items: baseline; gap: 1rem; margin-bottom: .6rem; }
+.page-head h1[b-au3dybtdly] { margin: 0; font-family: 'DM Serif Display', serif; font-weight: 400; font-size: 2.4rem; color: #1f3d1b; }
+.page-head p[b-au3dybtdly] { margin: 0; color: #666; }
+.intro[b-au3dybtdly] { max-width: 40rem; margin: 0 0 1.4rem; line-height: 1.7; color: #444; }
+
+.chips[b-au3dybtdly] { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 2rem; }
+.chip[b-au3dybtdly] {
+    padding: .45rem 1.1rem; border: 1.5px solid #c9d6c5; border-radius: 999px;
+    font-family: inherit; font-size: .85rem; font-weight: 600; color: #2b2b2b; background: #fff; cursor: pointer;
+}
+.chip:hover[b-au3dybtdly] { border-color: #2f5d2a; color: #2f5d2a; }
+.chip.active[b-au3dybtdly] { background: #2f5d2a; border-color: #2f5d2a; color: #fff; }
+
+.grid[b-au3dybtdly] {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: .9rem;
+}
+@media (max-width: 960px) { .recipes-page[b-au3dybtdly] { padding: 1.5rem 1.2rem 3rem; } }

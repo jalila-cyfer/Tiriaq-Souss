@@ -1,0 +1,13 @@
+@page "/"
+
+<Header CartCount="@cartCount" />
+
+<section class="hero">
+    <HeroContent SlideCount="3" ActiveSlide="@activeSlide" OnSlideChanged="@(i => activeSlide = i)" />
+    <HeroVisual ImageUrl="images/a.jpg" />
+</section>
+
+@code {
+    private int cartCount = 0;
+    private int activeSlide = 0;
+}

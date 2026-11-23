@@ -1,0 +1,8 @@
+<div class="hero-visual">
+    <img src="@ImageUrl" alt="@Alt" />
+</div>
+
+@code {
+    [Parameter] public string ImageUrl { get; set; } = "images/hero-products.png";
+    [Parameter] public string Alt { get; set; } = "Produits bio Tiriaq Souss : quinoa, miel, amandes, huile d'olive, graines de chia et cabas en jute";
+}
